@@ -9,13 +9,24 @@
 </head>
 
 <body>
-    <div>
+    <form action="" id="Form">
         <p id="allinOne">Enter Gmail</p>
         <input type="text" id="name" required>
         <input type="text" id="Email" required>
         <input type="password" id="Pass" required>
+        <!-- For drag -->
+        <div id="DragD">
+            <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">I want to
+                    Sign Up
+                </p>
+            </div>
+
+            <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+
         <button>Sign Up</button>
-    </div>
+    </form>
 
 
 

@@ -8,7 +8,7 @@
   margin-bottom: 20px;
 }
 
-div {
+#Form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,19 +20,53 @@ div {
   border-radius: 10px;
   box-shadow: 2px 3px 3px black;
 }
-div input {
+#Form input {
   height: 25px;
-  width: 300px;
+  width: 250px;
   margin: 5px 0;
   border-radius: 10px;
   outline: none;
   padding: 0 8px;
 }
-button {
+
+#DragText {
+  height: 19px;
+  width: 190px;
+  background-color: rgb(35, 43, 197);
+  border: 1px solid burlywood;
+  border-radius: 9px;
+  font-size: 12px;
+  padding: 6px 3px 0px 10px;
+  color: rgb(255, 219, 240);
+  text-align: center;
+}
+
+.droptarget {
+  height: 18px;
   width: 100px;
-  height: 30px;
+  background-color: rgb(52, 52, 249);
+  border: 1px solid burlywood;
+  color: white;
   border-radius: 10px;
-  background-color: rgb(58, 58, 234);
-  color: wheat;
-  margin-top: 10px;
+  font-size: 12px;
+  padding: 6px 3px 0px 10px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+#DragText {
+  margin: 5px 0;
+}
+button {
+  width: 90px;
+  height: 35px;
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+#Form #DragD {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 10px 0;
 }

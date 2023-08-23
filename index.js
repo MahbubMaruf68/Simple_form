@@ -2,7 +2,7 @@ let peraOne = document.querySelector("#allinOne");
 let name = document.querySelector("#name");
 let inputOne = document.querySelector("#Email");
 let inputTwo = document.querySelector("#Pass");
-let backG = document.querySelector("div");
+let backG = document.querySelector("#Form");
 
 // For Name
 name.addEventListener("focus", function () {
@@ -42,3 +42,24 @@ inputTwo.addEventListener("focusout", function (e) {
   backG.style.backgroundColor = "aqua";
   console.log("Password: " + e.target.value);
 });
+
+// For Drug
+
+let DragBox = document.querySelector("#DropBox");
+let DragText = document.querySelector("#DrugText");
+
+// 1st Step: Who dropped (DrugText "id" transfer to DrugBox)
+
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+}
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drop(event) {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+}
